@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font: 20px 'Helvetica Neue', 'PingFang SC', STHeitiSC-Light, Helvetica, Arial, sans-serif;
+	text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+section,canvas,article {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#canvas_area {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background-image: url(../img/index/main_back_pc.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#canvas_area:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: .5;
+}
+
+@media only screen and (max-width: 768px) {
+	#canvas_area {
+		background-image: url(../img/index/main_back_phone.jpg);
+	}
+}
+
+#clock {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.01);
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+	display: table;
+	width: 100%;
+	height: 100%;
+	font-size: 2rem;
+	letter-spacing: 1px;
+	color: #fff;
+	text-align: center;
+}
+
+.content p {
+	display: table-cell;
+	vertical-align: middle;
+}
